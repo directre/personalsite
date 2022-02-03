@@ -1,8 +1,10 @@
-<html lang="de">
+<html lang="en">
 <head>
+  <title>IOTA link converter</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IOTA link redirect</title>
+  <link link type="text/css" rel="stylesheet" href="../assets/style.css">
+  <meta name="description" content="converts url with iota link parameters to Firefly IOTA link">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" >
 </head>
 <body>
@@ -15,7 +17,6 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const iota_uri = `iota://wallet/send/${urlParams.get('address')}/?amount=${urlParams.get('amount')}&unit=${urlParams.get('unit')}`;
-    
     window.location.replace(iota_uri);
   </script>
 </body>
