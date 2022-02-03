@@ -1,0 +1,22 @@
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IOTA link redirect</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" >
+</head>
+<body>
+  <main class="container">
+    <h2 data-splitting class="headline headline--float">Trying to open Firefly.</h2>
+  </main>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <script>Splitting();</script>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const iota_uri = `iota://wallet/send/${urlParams.get('address')}/?amount=${urlParams.get('amount')}&unit=${urlParams.get('unit')}`;
+    
+    window.location.replace(iota_uri);
+  </script>
+</body>
+</html>
