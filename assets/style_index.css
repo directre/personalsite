@@ -395,12 +395,12 @@ p {
   
 }
 .datenschutz-link {
-  width: inherit;
-  
   padding-top: 0.6em;
-  
   text-align: center;
   font-size: 92%;
+}
+.datenschutz-link:hover{
+  text-decoration: underline;
   
 }
 
